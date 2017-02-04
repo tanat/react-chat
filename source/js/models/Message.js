@@ -1,12 +1,12 @@
 
 export default class User {
 
-  id;
+  userId;
   text;
   type;
 
   constructor(id, type, text) {
-    this.id = id;
+    this.userId = id;
     this.type = type;
     this.text = text;
   }

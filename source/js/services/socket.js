@@ -10,11 +10,10 @@ class SocketService {
     });
   }
 
-  sendMessage(socket) {
-    socket.emit('message', 'asdsasd')
+  sendMessage(socket, message) {
+    socket.emit('message', message)
   }
 
 }
-
 
 export default new SocketService();

@@ -1,0 +1,9 @@
+.messages {
+  position: relative;
+  flex-basis: 100%;
+  &--list {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

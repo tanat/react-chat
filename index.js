@@ -66,11 +66,11 @@ app.io.on('connection', (ctx, data) => {
 
   });
 
-  socket.on('message', (ctx) => {
-    app.io.emit('message', {
-      type: 'message',
+  socket.on('message', (text) => {
+    app.io.broadcast('message', {
+      type: 'text',
       id: id,
-      text: ctx.data,
+      text: text,
     });
   });
 

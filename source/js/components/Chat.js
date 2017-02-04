@@ -8,7 +8,6 @@ import socketService from '../services/socket';
 
 
 @connect((state) => ({
-  messages: state.messages,
   connectionStatus: state.connectionStatus,
 }))
 export default class Chat extends React.Component {
@@ -23,10 +22,12 @@ export default class Chat extends React.Component {
             dispatch(UserConnectedAction(data));
           } else if (data.type === 'leave') {
             dispatch(UserDisconnectedAction(data));
-          } else if (data.type === 'message') {
+          } else if (data.type === 'text') {
             dispatch(MessageAddAction(data));
           }
         });
+
+        this.socket = socket;
 
     });
   }
@@ -50,7 +51,11 @@ export default class Chat extends React.Component {
   get chat() {
     return (<div className="chat--wrapper">
       <ChatMessages />
-      <ChatForm />
+      <ChatForm onSend={this.onSend} />
     </div>);
+  }
+
+  onSend = (text) => {
+    socketService.sendMessage(this.socket, text)
   }
 }

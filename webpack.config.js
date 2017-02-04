@@ -1,6 +1,7 @@
 const path = require('path');
 const exec = require( 'child_process' ).execSync;
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const buildDir = path.resolve('./build/');
 const NODE_ENV = process.env.NODE_ENV;
@@ -17,11 +18,19 @@ const option = {
     chunkFilename: '[id].chunk.js'
   },
   module: {
-    loaders: [{
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    }]
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },{
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: "css-loader!sass-loader",
+        }),
+      },
+    ]
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -31,6 +40,10 @@ const option = {
     new webpack.DefinePlugin({ 'NODE_ENV': JSON.stringify(NODE_ENV) }),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(NODE_ENV) }}),
     new webpack.optimize.CommonsChunkPlugin({ name: 'common', filename: 'common.js'}),
+    new ExtractTextPlugin({
+      filename: 'app.css',
+      allChunks: true
+    }),
   ]
 };
 

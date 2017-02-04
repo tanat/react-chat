@@ -1,6 +1,15 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Chat from './containers/Chat';
+import {Provider} from 'react-redux';
+import '../styles/app.scss';
+
+import {store} from './configureStore';
+import Chat from './components/Chat';
 
 const root = document.getElementById('root');
-console.log("Dsds");
-// ReactDOM.render(root,)
+ReactDOM.render(
+  (<Provider store={store}>
+    <Chat />
+  </Provider>),
+  root
+);

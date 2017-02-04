@@ -2,10 +2,14 @@ const Koa = require('koa');
 const IO = require('koa-socket');
 const hbs = require('koa-hbs');
 const serve = require('koa-static');
+const shortid = require('shortid');
 
 const app = new Koa();
 const io = new IO();
 const port = 3001;
+
+const users = [];
+const messages = [];
 
 app.use(hbs.middleware({
   viewPath: `${__dirname}/source/views`
@@ -34,6 +38,43 @@ app.use(function *() {
 });
 
 io.attach(app);
+
+app.io.on('connection', (ctx, data) => {
+
+  console.log('user connected');
+
+  let id = shortid.generate();
+  const socket = ctx.socket;
+
+  let newUser = { id: id, socket: socket };
+  users.push(newUser);
+
+  app.io.broadcast('message', {
+    type: 'enter',
+    id: id,
+  });
+
+  socket.on('disconnect', () => {
+
+    console.log('user disconnected');
+
+    users.splice(users.findIndex((user) => user.id === id), 1);
+    app.io.broadcast('message', {
+      type: 'leave',
+      id: id,
+    });
+
+  });
+
+  socket.on('message', (ctx) => {
+    app.io.emit('message', {
+      type: 'message',
+      id: id,
+      text: ctx.data,
+    });
+  });
+
+});
 
 app.listen(port);
 console.log(`Start listening on ${port}`);

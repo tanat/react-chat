@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b73e1324-1450-4e87-9e2a-1ef3d69285fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/components/Chat.js" afterPath="$PROJECT_DIR$/source/js/components/Chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/components/ChatForm.js" afterPath="$PROJECT_DIR$/source/js/components/ChatForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/containers/ChatMessages.js" afterPath="$PROJECT_DIR$/source/js/containers/ChatMessages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/models/Message.js" afterPath="$PROJECT_DIR$/source/js/models/Message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/services/socket.js" afterPath="$PROJECT_DIR$/source/js/services/socket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/styles/components/chat.scss" afterPath="$PROJECT_DIR$/source/styles/components/chat.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/styles/_vars.scss" afterPath="$PROJECT_DIR$/source/styles/_vars.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/styles/components/form.scss" afterPath="$PROJECT_DIR$/source/styles/components/form.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/styles/components/messages.scss" afterPath="$PROJECT_DIR$/source/styles/components/messages.scss" />
     </list>
@@ -42,8 +37,8 @@
       <file leaf-file-name="messages.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/styles/components/messages.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="414">
+              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -52,9 +47,31 @@
       <file leaf-file-name="form.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/styles/components/form.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="252">
+              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_vars.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/styles/_vars.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/js/components/ChatForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,19 +112,7 @@
         <entry file="file://$PROJECT_DIR$/source/js/containers/ChatMessages.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/js/components/ChatForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -216,7 +221,6 @@
         <option value="$PROJECT_DIR$/source/js/containers/Chat.js" />
         <option value="$PROJECT_DIR$/source/js/app.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/source/styles/_vars.scss" />
         <option value="$PROJECT_DIR$/source/styles/_reset.scss" />
         <option value="$PROJECT_DIR$/source/styles/app.scss" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -228,14 +232,15 @@
         <option value="$PROJECT_DIR$/source/js/reducers/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/source/styles/components/chat.scss" />
-        <option value="$PROJECT_DIR$/source/styles/components/form.scss" />
-        <option value="$PROJECT_DIR$/source/styles/components/messages.scss" />
         <option value="$PROJECT_DIR$/source/js/services/socket.js" />
-        <option value="$PROJECT_DIR$/source/js/components/ChatForm.js" />
         <option value="$PROJECT_DIR$/source/js/models/Message.js" />
         <option value="$PROJECT_DIR$/source/js/components/Chat.js" />
-        <option value="$PROJECT_DIR$/source/js/containers/ChatMessages.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/source/js/containers/ChatMessages.js" />
+        <option value="$PROJECT_DIR$/source/styles/components/form.scss" />
+        <option value="$PROJECT_DIR$/source/js/components/ChatForm.js" />
+        <option value="$PROJECT_DIR$/source/styles/_vars.scss" />
+        <option value="$PROJECT_DIR$/source/styles/components/messages.scss" />
       </list>
     </option>
   </component>
@@ -578,12 +583,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486072273640</updated>
       <workItem from="1486072275773" duration="3012000" />
-      <workItem from="1486131910304" duration="21622000" />
+      <workItem from="1486131910304" duration="22873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24634000" />
+    <option name="totallyTimeSpent" value="25885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -607,6 +612,25 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20902778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -666,7 +690,7 @@
         <state relative-caret-position="76">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <marker date="1486248904000" expanded="true" signature="19:2372" ph="[...]" />
+            <marker date="1486250078000" expanded="true" signature="19:2372" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -733,7 +757,7 @@
         <state relative-caret-position="-135">
           <caret line="12" column="1152" lean-forward="false" selection-start-line="12" selection-start-column="1152" selection-end-line="12" selection-end-column="1152" />
           <folding>
-            <marker date="1486248904000" expanded="true" signature="19:2372" ph="[...]" />
+            <marker date="1486250078000" expanded="true" signature="19:2372" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -776,14 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/styles/_vars.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -912,22 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/styles/components/form.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/styles/components/messages.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/js/services/socket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -954,23 +954,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/js/components/ChatForm.js">
+    <entry file="file://$PROJECT_DIR$/source/js/containers/ChatMessages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        <state relative-caret-position="450">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/js/containers/ChatMessages.js">
+    <entry file="file://$PROJECT_DIR$/source/styles/_vars.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/styles/components/form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/js/components/ChatForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/styles/components/messages.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

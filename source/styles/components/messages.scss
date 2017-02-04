@@ -5,5 +5,31 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding: 6px 16px;
+  }
+}
+
+.message {
+  padding: 10px 0;
+  display: flex;
+  &_enter {
+    color: $green;
+  }
+  &_leave {
+    color: $grey;
+  }
+  &_text {
+  }
+  &--user {
+    margin-right: 10px;
+  }
+  &--text {
+    font-style: italic;
+  }
+  .fa {
+    flex-basis: 16px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 10px;
   }
 }

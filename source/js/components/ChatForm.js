@@ -7,9 +7,13 @@ export default class ChatForm extends React.Component {
     text: '',
   };
 
+  componentDidMount() {
+    this.textInput.focus();
+  }
+
   render() {
     return (<form className="form">
-      <input type="text" onChange={this.onChange} value={this.state.text} />
+      <input ref={(input) => this.textInput = input} type="text" onChange={this.onChange} value={this.state.text} className="form--text" />
       <button type="submit" onClick={this.onClick} className="form--button">Send</button>
     </form>);
   }

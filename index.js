@@ -60,6 +60,7 @@ app.io.on('connection', (ctx, data) => {
   app.io.broadcast('message', {
     type: 'enter',
     id: id,
+    name: newUser.name,
   });
 
   socket.on('disconnect', () => {
@@ -71,6 +72,7 @@ app.io.on('connection', (ctx, data) => {
     app.io.broadcast('message', {
       type: 'leave',
       id: id,
+      name: newUser.name,
     });
 
   });

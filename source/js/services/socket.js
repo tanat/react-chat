@@ -14,6 +14,10 @@ class SocketService {
     socket.emit('message', message)
   }
 
+  sendNewName(socket, newName) {
+    socket.emit('new name', newName)
+  }
+
 }
 
 export default new SocketService();

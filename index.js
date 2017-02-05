@@ -79,8 +79,24 @@ app.io.on('connection', (ctx, data) => {
     app.io.broadcast('message', {
       type: 'text',
       id: id,
+      name: newUser.name,
       text: text,
     });
+  });
+
+  socket.on('new name', (text) => {
+    let user = users.find((user) => user.id === id);
+
+    let oldName = user.name;
+    user.name = text;
+
+    app.io.broadcast('message', {
+      type: 'name changed',
+      id: id,
+      oldName: oldName,
+      newName: text,
+    });
+
   });
 
 });

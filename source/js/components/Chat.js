@@ -5,7 +5,7 @@ import ChatMessages from '../containers/ChatMessages';
 import ChatForm from './ChatForm';
 import UserInfo from './UserInfo';
 import {
-  UserDisconnectedAction, UserConnectedAction, MessageAddAction, SetConnectionStatusAction, GetInfoAction
+  UserDisconnectedAction, UserConnectedAction, MessageAddAction, SetConnectionStatusAction, GetInfoAction, UserChangeNameAction, InfoUpdatedAction
 } from '../actions/app';
 import socketService from '../services/socket';
 
@@ -26,6 +26,8 @@ export default class Chat extends React.Component {
             dispatch(UserDisconnectedAction(data));
           } else if (data.type === 'text') {
             dispatch(MessageAddAction(data));
+          } else if (data.type === 'name changed') {
+            dispatch(UserChangeNameAction(data));
           }
         });
         socket.on('user info', (data) => {
@@ -53,7 +55,7 @@ export default class Chat extends React.Component {
 
   get chat() {
     return (<div className="chat--wrapper">
-      <UserInfo />
+      <UserInfo onNameChanged={this.onNameChanged} />
       <ChatMessages />
       <ChatForm onSend={this.onSend} />
     </div>);
@@ -61,5 +63,10 @@ export default class Chat extends React.Component {
 
   onSend = (text) => {
     socketService.sendMessage(this.socket, text)
-  }
+  };
+
+  onNameChanged = (newName) => {
+    socketService.sendNewName(this.socket, newName);
+    this.props.dispatch(InfoUpdatedAction(newName));
+  };
 }

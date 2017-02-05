@@ -20,7 +20,8 @@
   &_leave {
     color: $grey;
   }
-  &_text {
+  &_changed {
+    color: $yellow;
   }
   &--user {
     margin-right: 10px;

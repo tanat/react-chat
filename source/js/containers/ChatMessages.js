@@ -37,6 +37,9 @@ export default class ChatMessages extends React.Component {
           </div>
           <div className="message--text">{message.text}</div>
         </div>);
+      } else if (message.type === 'name changed') {
+        list.push(<div className="message message_changed" key={i}>
+          <i className="fa fa-pencil" />{message.text}</div>);
       }
     });
 

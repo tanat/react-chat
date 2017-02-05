@@ -7,9 +7,15 @@ import {connect} from 'react-redux';
 }))
 export default class ChatMessages extends React.Component {
 
+  componentDidUpdate() {
+    if (this.div) {
+      this.div.scrollTop = this.div.scrollHeight;
+    }
+  }
+
   render() {
     return (<div className="messages">
-      <div className="messages--list">{this.messages}</div>
+      <div ref={(div) => this.div = div} className="messages--list">{this.messages}</div>
     </div>);
   }
 
@@ -27,7 +33,7 @@ export default class ChatMessages extends React.Component {
       } else if (message.type === 'text') {
         list.push(<div className="message message_text" key={i}>
           <div className="message--user">
-            <i className="fa fa-user-o" />#{message.userId}:
+            <i className="fa fa-user-o" />#{message.name}:
           </div>
           <div className="message--text">{message.text}</div>
         </div>);

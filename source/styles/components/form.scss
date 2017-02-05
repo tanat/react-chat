@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   align-items: stretch;
+  background: white;
+  z-index: 100;
   &--text {
     flex-basis: 100%;
     border: none;

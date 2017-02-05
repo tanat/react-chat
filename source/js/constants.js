@@ -5,4 +5,6 @@ export default {
   MESSAGE_ADD: 'MESSAGE_ADD',
 
   SET_CONNECTION: 'SET_CONNECTION',
+
+  GET_INFO: 'GET_INFO',
 }

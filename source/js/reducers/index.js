@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {List} from 'immutable';
+import {List, Map} from 'immutable';
 import constants from '../constants';
 import Message from '../models/Message';
 
@@ -10,13 +10,13 @@ const messages = (state = new List(),  action) => {
   switch (type) {
 
     case constants.MESSAGE_ADD:
-      return state.push(new Message(payload.id, payload.type, payload.text));
+      return state.push(new Message(payload.id, payload.id, payload.type, payload.text));
 
     case constants.USER_CONNECTED:
-      return state.push(new Message(payload.id, payload.type, `User #${payload.id} connected`));
+      return state.push(new Message(payload.id, payload.id, payload.type, `User #${payload.id} connected`));
 
     case constants.USER_DISCONNECTED:
-      return state.push(new Message(payload.id, payload.type, `User #${payload.id} disconnected`));
+      return state.push(new Message(payload.id, payload.id, payload.type, `User #${payload.id} disconnected`));
 
     default:
       return state;
@@ -30,9 +30,19 @@ const connectionStatus = (state = false, action) => {
     default:
       return state;
   }
-}
+};
+
+const userInfo = (state = false, action) => {
+  switch (action.type) {
+    case constants.GET_INFO:
+      return Map(action.payload);
+    default:
+      return state;
+  }
+};
 
 export default combineReducers({
   messages,
   connectionStatus,
+  userInfo,
 });

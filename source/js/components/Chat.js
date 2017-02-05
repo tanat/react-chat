@@ -3,7 +3,10 @@ import {connect} from 'react-redux';
 
 import ChatMessages from '../containers/ChatMessages';
 import ChatForm from './ChatForm';
-import {UserDisconnectedAction, UserConnectedAction, MessageAddAction, SetConnectionStatusAction} from '../actions/app';
+import UserInfo from './UserInfo';
+import {
+  UserDisconnectedAction, UserConnectedAction, MessageAddAction, SetConnectionStatusAction, GetInfoAction
+} from '../actions/app';
 import socketService from '../services/socket';
 
 
@@ -16,7 +19,6 @@ export default class Chat extends React.Component {
     const {dispatch} = this.props;
     socketService.connect()
       .then((socket) => {
-        dispatch(SetConnectionStatusAction());
         socket.on('message', (data) => {
           if (data.type === 'enter') {
             dispatch(UserConnectedAction(data));
@@ -26,17 +28,18 @@ export default class Chat extends React.Component {
             dispatch(MessageAddAction(data));
           }
         });
+        socket.on('user info', (data) => {
+          dispatch(GetInfoAction(data));
+          dispatch(SetConnectionStatusAction());
+        });
 
         this.socket = socket;
-
     });
   }
 
   render() {
     const {connectionStatus} = this.props;
-
     let content = connectionStatus ? this.chat : this.loader;
-
     return (<div className="chat">
       {content}
     </div>);
@@ -50,6 +53,7 @@ export default class Chat extends React.Component {
 
   get chat() {
     return (<div className="chat--wrapper">
+      <UserInfo />
       <ChatMessages />
       <ChatForm onSend={this.onSend} />
     </div>);

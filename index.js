@@ -46,8 +46,16 @@ app.io.on('connection', (ctx, data) => {
   let id = shortid.generate();
   const socket = ctx.socket;
 
-  let newUser = { id: id, socket: socket };
+  let newUser = {
+    id: id,
+    name: id,
+    socket: socket
+  };
   users.push(newUser);
+
+  let timer = setTimeout(() => {
+    socket.emit('user info', { id: id, name: id});
+  }, 300);
 
   app.io.broadcast('message', {
     type: 'enter',
@@ -56,6 +64,7 @@ app.io.on('connection', (ctx, data) => {
 
   socket.on('disconnect', () => {
 
+    clearTimeout(timer);
     console.log('user disconnected');
 
     users.splice(users.findIndex((user) => user.id === id), 1);

@@ -2,6 +2,10 @@ import React from 'react';
 
 export default class ChatForm extends React.Component {
 
+  static propTypes = {
+    onSend: React.PropTypes.func.isRequired
+  };
+
   state = {
     text: '',
   };

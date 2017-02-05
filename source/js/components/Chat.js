@@ -15,6 +15,10 @@ import socketService from '../services/socket';
 }))
 export default class Chat extends React.Component {
 
+  static propTypes = {
+    connectionStatus: React.PropTypes.bool,
+  };
+
   componentDidMount() {
     const {dispatch} = this.props;
     socketService.connect()

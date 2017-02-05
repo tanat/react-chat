@@ -1,10 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Map} from 'immutable';
 
 @connect((state) => ({
   userInfo: state.userInfo
 }))
 export default class UserInfo extends React.Component {
+
+  static propTypes = {
+    userInfo: React.PropTypes.oneOfType([
+      React.PropTypes.instanceOf(Map),
+      React.PropTypes.bool,
+    ]),
+    onNameChanged: React.PropTypes.func.isRequired
+  };
 
   state = {
     editMode: false,

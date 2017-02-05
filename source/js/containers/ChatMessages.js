@@ -1,11 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {List} from 'immutable';
+
 
 @connect((state) => ({
   messages: state.messages,
 }))
 export default class ChatMessages extends React.Component {
+
+  static propTypes = {
+    messages: React.PropTypes.instanceOf(List),
+  };
 
   componentDidUpdate() {
     if (this.div) {
